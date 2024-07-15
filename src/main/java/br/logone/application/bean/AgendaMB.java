@@ -17,4 +17,5 @@ public class AgendaMB {
     private String numero;
     private String motivo;
     private Solicitante solicitante;
+    private Long solicitanteId;
 }

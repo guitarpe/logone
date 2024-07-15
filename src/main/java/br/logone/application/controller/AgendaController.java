@@ -61,7 +61,13 @@ public class AgendaController {
             agenda.setData(agendaMB.getData());
             agenda.setNumero(agendaMB.getNumero());
             agenda.setMotivo(agendaMB.getMotivo());
-            agenda.setSolicitante(agendaMB.getSolicitante());
+
+            Solicitante solicitante = service.listaSolicitantes()
+                    .stream().filter(s -> s.getId() == agendaMB.getSolicitanteId())
+                    .findFirst()
+                    .orElse(null);
+
+            agenda.setSolicitante(solicitante);
 
             service.salvar(agenda);
 

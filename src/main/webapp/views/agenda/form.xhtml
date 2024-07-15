@@ -47,11 +47,11 @@
                                  styleClass="form-control" autocomplete="off"/>
 
                     <h:outputLabel for="solicitante" value="Solicitante:" />
-                    <h:selectOneMenu id="solicitante" value="#{agendaController.agendaMB.solicitante}"
+                    <h:selectOneMenu id="solicitante" value="#{agendaController.agendaMB.solicitanteId}"
                                      styleClass="form-control">
                         <f:selectItem itemLabel="Selecione" itemValue="#{null}" />
                         <f:selectItems value="#{agendaController.solicitantes()}" var="solicitante"
-                                       itemValue="#{solicitante}" itemLabel="#{solicitante.nome}" />
+                                       itemValue="#{solicitante.id}" itemLabel="#{solicitante.nome}" />
                     </h:selectOneMenu>
                 </h:panelGrid>
                 <div class="d-flex justify-around mt-5">
