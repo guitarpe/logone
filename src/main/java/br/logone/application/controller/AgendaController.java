@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.context.FacesContext;
 import java.time.LocalDate;
 import java.util.Date;
@@ -27,7 +28,9 @@ public class AgendaController {
     @Autowired
     private AgendaService service;
 
+    @ManagedProperty(value="#{agendaMB}")
     private AgendaMB agendaMB = new AgendaMB();
+
     private LocalDate dataInicio;
     private LocalDate dataFim;
     private Long solicitanteBusca;
