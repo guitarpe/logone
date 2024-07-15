@@ -1,0 +1,12 @@
+.form-control input, .form-control input:focus{
+    border:none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0;
+    color: #000;
+    font-family: Arial-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.form-control input.ui-spinner-input{
+    margin-top: 3px;
+}
